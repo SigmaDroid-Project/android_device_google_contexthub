@@ -579,7 +579,7 @@ Return<void> Contexthub::debug(const hidl_handle& hh_fd,
     } else {
         result.appendFormat("unknown debug options");
     }
-    write(fd, result.string(), result.size());
+    write(fd, result.c_str(), result.size());
 
     return Void();
 }
